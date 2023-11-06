@@ -184,7 +184,9 @@
                 <nav class="header__nav">
                     <ul class="header__menu">
                         <li class="header__menu-item">
-                            <img src="../images/header/logo.svg" alt="" class="header__logo" loading="lazy">
+                            <a href="#" class="header__logo-link">
+                                <img src="../images/header/logo.svg" alt="" class="header__logo" loading="lazy">
+                            </a>
                         </li>
                         <li class="header__menu-item dropdown">
                             <div class="header__dropdown">
@@ -833,7 +835,7 @@
                                 <div class="tarif__descr">
                                     <p class="tarif__descr-text"><span class="tarif__star">*</span>є можливість придбати
                                         кожне рішення окремо</p>
-                                    <a href="#" class="tarif__descr-link">Натисніть щоб залишити заявку</a>
+                                    <a href="" class="tarif__descr-link open__popup-2">Натисніть щоб залишити заявку</a>
                                 </div>
                             </div>
                             <div class="tarif__block-second">
@@ -925,7 +927,7 @@
                                 <div class="tarif__descr mobile">
                                     <p class="tarif__descr-text"><span class="tarif__star">*</span>є можливість придбати
                                         кожне рішення окремо</p>
-                                    <a href="#" class="tarif__descr-link">Натисніть щоб залишити заявку</a>
+                                    <a href="" class="tarif__descr-link open__popup-2">Натисніть щоб залишити заявку</a>
                                 </div>
                                 <a href="" class="standart-btn open__popup-2 tarif-mobile__btn">Спробувати</a>
                             </div>
@@ -968,7 +970,7 @@
                                 <div class="tarif__descr mobile">
                                     <p class="tarif__descr-text"><span class="tarif__star">*</span>є можливість придбати
                                         кожне рішення окремо</p>
-                                    <a href="#" class="tarif__descr-link">Натисніть щоб залишити заявку</a>
+                                    <a href="" class="tarif__descr-link open__popup-2">Натисніть щоб залишити заявку</a>
                                 </div>
                                 <a href="" class="standart-btn open__popup-2 tarif-mobile__btn">Спробувати</a>
                             </div>
@@ -1257,9 +1259,8 @@
                 <img src="../images/popup/logo.svg" alt="" class="popup__logo" loading="lazy">
                 <p class="popup__descr form">Залиште заявку, щоб отримати інструменти QB tools</p>
                 <form class="popup__form">
-                    <div class="input__wrap">
-                        <input class="input-name popup-input" type="text" placeholder="Ваше ім’я">
-                        <span class="red-star">*</span>
+                    <div class="input__wrap input__wrap-name">
+                        <input class="input-name popup-input popup-name-input" type="text" placeholder="Ваше ім’я">
                     </div>
                     <div class="input__wrap">
                         <input class="input-tel popup-input" type="tel" id="phone-4" placeholder="">
