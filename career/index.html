@@ -606,7 +606,7 @@
     </footer>
 
 
-    <div class="popup">
+    <div class="popup first">
         <div class="popup__inner">
             <div class="popup__box ass">
                 <img src="../images/popup/close.svg" alt="" class="close__btn" loading="lazy">
@@ -626,10 +626,12 @@
                 <p class="popup__descr form">Залиште заявку, щоб отримати інструменти QB tools</p>
                 <form class="popup__form">
                     <div class="input__wrap input__wrap-name">
-                        <input class="input-name popup-input popup-name-input" type="text" placeholder="Ваше ім’я">
+                        <input class="input-name popup-input popup-name-input hidden-input" type="text"
+                            placeholder="Ваше ім’я" data-popup="1">
                     </div>
                     <div class="input__wrap">
-                        <input class="input-tel popup-input" type="tel" id="phone-4" placeholder="">
+                        <input class="input-tel popup-input hidden-input" type="tel" id="phone-4" placeholder=""
+                            data-popup="1">
                     </div>
                 </form>
                 <div class="standart-btn popup__btn-2">Залишити заявку</div>

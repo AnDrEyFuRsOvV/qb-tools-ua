@@ -597,7 +597,14 @@
                                     </p>
                                     <h3 class="try__sub-title desctop">Переходьте за посиланням</h3>
                                     <p class="try__descr desctop">та ознайомтесь з можливостями</p>
-                                    <a href="#" class="standart-btn try__btn-link desctop">Ознайомитися</a>
+                                    <div class="try__btn-slider desctop">
+                                        <div class="try__link-btn-ga">
+                                            <a href="https://apps.apple.com/ua/app/qb-tools/id6447362075?l=uk"
+                                                class="try__btn-apple"><img src="../images/try/btn-a.png" alt=""></a>
+                                            <a href="https://play.google.com/store/apps/details?id=com.qbtools"
+                                                class="try__btn-google"><img src="../images/try/btn-g.png" alt=""></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="try__box">
@@ -611,7 +618,14 @@
                             <div class="try__box mobile">
                                 <h3 class="try__sub-title">Переходьте за посиланням</h3>
                                 <p class="try__descr">та ознайомтесь з можливостями</p>
-                                <div class="standart-btn try__btn-link">Ознайомитися</div>
+                                <div class="try__btn-slider">
+                                    <div class="try__link-btn-ga">
+                                        <a href="https://apps.apple.com/ua/app/qb-tools/id6447362075?l=uk"
+                                            class="try__btn-apple"><img src="../images/try/btn-a.png" alt=""></a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.qbtools"
+                                            class="try__btn-google"><img src="../images/try/btn-g.png" alt=""></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -879,7 +893,7 @@
     </footer>
 
 
-    <div class="popup">
+    <div class="popup first">
         <div class="popup__inner">
             <div class="popup__box ass">
                 <img src="../images/popup/close.svg" alt="" class="close__btn" loading="lazy">
@@ -899,10 +913,12 @@
                 <p class="popup__descr form">Залиште заявку, щоб отримати інструменти QB tools</p>
                 <form class="popup__form">
                     <div class="input__wrap input__wrap-name">
-                        <input class="input-name popup-input popup-name-input" type="text" placeholder="Ваше ім’я">
+                        <input class="input-name popup-input popup-name-input hidden-input" type="text"
+                            placeholder="Ваше ім’я" data-popup="1">
                     </div>
                     <div class="input__wrap">
-                        <input class="input-tel popup-input" type="tel" id="phone-4" placeholder="">
+                        <input class="input-tel popup-input hidden-input" type="tel" id="phone-4" placeholder=""
+                            data-popup="1">
                     </div>
                 </form>
                 <div class="standart-btn popup__btn-2">Залишити заявку</div>
