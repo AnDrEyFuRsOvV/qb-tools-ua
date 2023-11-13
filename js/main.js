@@ -686,6 +686,12 @@ if (contact && redStarContact) {
 
 
 
+
+
+
+
+
+
 const cardElements = document.querySelectorAll(".cards__card");
 let activeCard = null;
 let clickCounter = 0;
@@ -704,36 +710,42 @@ function toggleCard(clickedCard, event) {
 }
 
 function handleClick(event) {
-  if (event.defaultPrevented) {
-    return; // Прекращаем выполнение, если событие было отменено
+  if (event.defaultPrevented || window.innerWidth > 950) {
+    return;
   }
 
   const clickedCard = event.currentTarget;
 
-  console.log("Клик");
   if (event.target.closest('.cards__card-wrapper-hover')) {
     event.preventDefault();
     clickCounter++;
 
     if (clickCounter === 2) {
-      window.location.href = event.target.href;
+      if (activeCard) {
+        window.location.href = activeCard.querySelector('a').href;
+        activeCard.classList.remove("active");
+        activeCard = null;
+        clickCounter = 0;
+      }
     }
   }
 
   toggleCard(clickedCard, event);
 }
 
+document.addEventListener('click', function (event) {
+  if (clickCounter > 0 && !event.target.closest('.cards__card-wrapper-hover')) {
+    // Сбрасываем состояние при клике вне карточек
+    activeCard?.classList.remove("active");
+    activeCard = null;
+    clickCounter = 0;
+  }
+});
+
 cardElements.forEach((card) => {
   card.addEventListener("click", handleClick);
 });
 
-document.querySelector('a').addEventListener('click', function (event) {
-  event.preventDefault();
-  if (clickCounter > 1) {
-    window.location.href = this.href;
-  }
-  clickCounter++;
-});
 
 
 
